@@ -1,0 +1,99 @@
+.card{ 
+    width: 300px;
+    height: 450px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 1s;
+    padding: 3px;
+    transform: translateZ(40px);
+}
+.card-imgBx{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: #191c29;
+    color: rgb(88 199 250 / 0%);
+    cursor: pointer;
+    font-family: cursive;
+   
+}
+.card-imgBx .pokemons-img{
+    width: 100%;
+    height: 100%;
+}
+.card-body{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, -40px) rotateY(180deg);
+    width: 90%;
+    height: 90%;
+    border-radius: 5px;
+    overflow: hidden;
+    background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/41d3ac77-2823-4e18-8910-a48de63acf87/d8xl0ja-ca02368b-643f-42f4-9721-f3895e14690d.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQxZDNhYzc3LTI4MjMtNGUxOC04OTEwLWE0OGRlNjNhY2Y4N1wvZDh4bDBqYS1jYTAyMzY4Yi02NDNmLTQyZjQtOTcyMS1mMzg5NWUxNDY5MGQuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.dUhAjPqt1Rkudg3gHjqPNOQAuaA2wmXZ7T-Lq6L28O8");
+    background-size: cover;
+    border: 2px solid #fff;
+}
+.card:hover{
+    transform: rotateY(180deg);
+}
+.card-body .bg{
+    position: absolute;
+    background: #fff;
+    border-radius: 100px;
+    width: 0%;
+    transition: .5s;
+}
+.card-body .bg:nth-child(1){
+    height: 25%;
+    transform-origin: left;
+    top: 0;
+    left: -30%;
+    transform: rotate(-10deg);
+}
+.card-body .bg:nth-child(2){
+    height: 50%;
+    transform-origin: right;
+    top: 5%;
+    right: -30%;
+    transform: rotate(-10deg);
+}
+.card-body .bg:nth-child(3){
+    height: 50%;
+    transform-origin: left;
+    top: 70%;
+    left: -30%;
+    transform: rotate(-10deg);
+}
+.card:hover .card-body .bg{
+    width: 200%;
+    transition-delay: 1s;
+
+}
+.card:hover .card-body .bg:nth-child(2){
+    transition-delay: 1.5s;
+}
+.card:hover .card-body .bg:nth-child(3){
+    transition-delay: 2s;
+}
+.content{
+    position: relative;
+    transition: .5s;
+    opacity: 0;
+    padding-top: 50px;
+    text-align: center;
+}
+.name{
+    font-size: 40px;
+    color: black;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+.type{
+    padding-bottom: 30px;
+}
+.card:hover .content{
+    opacity: 1;
+    transition-delay: 2.5s;
+}

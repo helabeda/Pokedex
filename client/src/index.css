@@ -1,0 +1,36 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+    cursor: url(https://cur.cursors-4u.net/games/gam-13/gam1282.cur), 
+    auto !important;
+}
+body{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:#ffd740;
+}
+/*================== MEDIA QUERIES (MEDIUM DIVICES) ===============*/
+@media screen and (max-width: 1024px){
+  body{
+    width: 100%;
+    height: 100vh;
+  }
+}
+/*================== MEDIA QUERIES (SMALL DIVICES) ===============*/
+@media screen and (max-width: 600px){
+  body{
+    width: 100%;
+    height: 100vh;
+  }
+}
+/*================== MEDIA QUERIES (SMALL DIVICES) ===============*/
+@media screen and (max-width: 320px){
+  body{
+    width: 100%;
+    height: 100vh;
+  }
+}

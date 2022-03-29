@@ -1,0 +1,214 @@
+
+.btn-bg.Pokemon .btn-group .ball button {
+    border: 5px solid #50514f;
+    border-radius: 5px;
+    background: transparent;
+    overflow: hidden;
+    position: relative;
+}
+.btn-bg.Pokemon .btn-group .ball button:hover {
+    border-color: #ffd740;
+}
+.btn-bg.Pokemon .btn-group .ball button:hover .pokemon-ball::before {
+    transform: translate3d(0, -100%, 0);
+    transition: transform 0.25s;
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.btn-bg.Pokemon .btn-group .ball button:hover .pokemon-ball::after {
+    transform: translate3d(0, 100%, 0);
+    transition: transform 0.25s;
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.btn-bg.Pokemon .btn-group .ball button:hover a {
+    transition: none;
+    color: transparent;
+    z-index: 999;
+}
+.btn-bg.Pokemon .btn-group .ball button:hover a::before {
+    transform: translate3d(100%, 0, 0);
+}
+.btn-bg.Pokemon .btn-group .ball button:hover a span:first-child::before,
+.btn-bg.Pokemon .btn-group .ball button:hover a span:nth-child(2)::before {
+    transition-delay: 0.3s;
+    transform: translate3d(0, 0, 0);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.btn-bg.Pokemon .btn-group .ball button .pokemon-ball {
+    position: absolute;
+    content: 'Go!';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+}
+.btn-bg.Pokemon .btn-group .ball button .pokemon-ball::before,
+.btn-bg.Pokemon .btn-group .ball button .pokemon-ball::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: #ef594f;
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.25s;
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.btn-bg.Pokemon .btn-group .ball button .pokemon-ball::after {
+    top: 50%;
+    background: #fff;
+}
+.btn-bg.Pokemon .btn-group .ball button a {
+    color: #50514f;
+    font-weight: 600;
+    font-size: 1.5em;
+    transition: color 0.5s 0.25s;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    z-index: 999;
+}
+.btn-bg.Pokemon .btn-group .ball button a::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 5px;
+    background: #50514f;
+    top: calc(50% - 2.5px);
+    transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+    transform: translate3d(-100%, 0, 0);
+}
+.btn-bg.Pokemon .btn-group .ball button a span {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.btn-bg.Pokemon .btn-group .ball button a span::before {
+    position: absolute;
+    content: attr(data-letters);
+    left: 0;
+    width: 100%;
+    color: #fff;
+    transition: transform 0.5s;
+}
+.btn-bg.Pokemon .btn-group .ball button a span:first-child::before {
+    top: 0;
+    color: #ef594f;
+    transform: translate3d(0, 100%, 0);
+}
+.btn-bg.Pokemon .btn-group .ball button a span:nth-child(2) {
+    top: 50%;
+}
+.btn-bg.Pokemon .btn-group .ball button a span:nth-child(2)::before {
+    bottom: 0;
+    transform: translate3d(0, -100%, 0);
+}
+.btn {
+    margin: 0 30px 30px 30px;
+    display: block;
+}
+:root {
+  --gamer-font: "Press Start 2P", monospace;
+  --battle-stipe-background: rgb(241, 239, 231);
+}
+#welcome{
+    position: relative;
+}
+#welcome .logo{
+    display: none;
+}
+#welcome .start-game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-animation: slide-in-elliptic-right-fwd 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-in-elliptic-right-fwd 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+#welcome .exit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 10%;
+    z-index: 1;
+    -webkit-animation: slide-out-elliptic-left-bck 0.7s ease-in 4.5s both;
+    animation: slide-out-elliptic-left-bck 0.7s ease-in 4.5s both;
+  }
+  #welcome .prof-oak {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    position:relative;
+    margin-left: 10%;
+    z-index: 0;
+    -webkit-animation: scale-in-center 5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 3s both;
+    animation: scale-in-center 5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 3s both;
+  }
+  #welcome .prof-oak img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 1;
+    height: 70vh;
+    width: 20vw;
+  }
+  #welcome .prof-oak .oak-speaks {
+    height: 75vh;
+    width: 30vw;
+    color: red;
+    font-family: var(--gamer-font);
+    font-size: 3vw;
+  }
+#welcome .prof-oak .pokedex-link img {
+    height: 20%;
+    width: 30%;
+}
+  #welcome .prof-oak .pokedex-link .pokedex{
+    text-align: center;
+    height: 20vh;
+    width: 10vw;
+    font-size: 1.5vw;
+    color: red;
+    font-family: var(--gamer-font);
+}
+/*================== MEDIA QUERIES (SMALL DIVICES) ===============*/
+@media screen and (max-width: 600px){
+    #welcome .exit{
+        margin-top: 30%;
+    }
+    #welcome .prof-oak img{
+        height: 50vh;
+        width: 20vw;
+    }
+    #welcome .prof-oak .oak-speaks{
+        height: 100vh;
+        width: 30vw;
+        font-size: 5vw;
+    }
+    .Pokemon-logo{
+        width: 100%;
+        height: 100%;
+    }
+    #welcome .prof-oak .pokedex-link img {
+        height: 50px;
+        width: 50px;
+    }
+    #welcome .prof-oak .pokedex-link .pokedex{
+        height: 40vh;
+        width: 20vw;
+        font-size: 3vw;
+    }
+}
+  /*================== MEDIA QUERIES (SMALL DIVICES) ===============*/
+  @media screen and (max-width: 320px){
+    #welcome .exit{
+        margin-top: 50%;
+    }
+    #welcome .prof-oak {
+        width: 100%;
+    }
+  }
